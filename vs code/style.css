@@ -1,0 +1,114 @@
+/* Code by Asadujjaman Alif */
+/* Google Fonts থেকে Hind Siliguri ফন্ট ইমপোর্ট */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+body {
+  background: #2f3843;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* navigation */
+.nav {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 40px;
+}
+
+/* navigation item */
+.item {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  border: none;
+  background: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  z-index: 1;
+}
+
+.item i {
+  font-size: 22px;
+}
+
+.item small {
+  font-size: 12px;
+}
+
+/* active item */
+.item.active {
+  color: #fff;
+}
+
+/* badge */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.sale {
+  background: #ffdada;
+  color: #d00;
+}
+
+.count {
+  background: #ffe5b4;
+  color: #ff8c00;
+  margin-right: 10px;
+}
+
+/* blob background (advanced) */
+.blob {
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  background: linear-gradient(135deg, #6a6aff, #4f46e5);
+  border-radius: 30px;
+  left: 18px;
+  top: 12px;
+  transition: left 0.45s cubic-bezier(0.68, -0.55, 0.27, 1.55), width 0.3s ease;
+  box-shadow: 0 10px 25px #5a5aff66, inset 0 0 12px #ffffff4d;
+}
+
+/* click effect */
+.nav:active .blob {
+  width: 82px;
+}
+
+.blob {
+  animation: glow 2.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 8px 20px #5a5aff59;
+  }
+  50% {
+    box-shadow: 0 12px 30px #5a5aff8c;
+  }
+  100% {
+    box-shadow: 0 8px 20px #5a5aff59;
+  }
+}
